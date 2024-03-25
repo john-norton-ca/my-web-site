@@ -1,17 +1,10 @@
 <template>
     <div class="menu-container">
-  
-       
-
-            
         <NuxtLink to="/main-page" class="logo">
-            
         </NuxtLink>
         <p class="logo-title">nomososo</p>
         <div class="header-contact-info">
-            <p title="telephone" class="icon phone-number">
-                Call us at 1-800-555-5555
-            </p>
+            
         </div>
     </div>
     <MainNavBar />
@@ -68,4 +61,6 @@
 .icon {
     margin-right: 0.5rem;
 }
+
+
 </style>
