@@ -25,14 +25,10 @@
     text-decoration: none;
 }
 
-
 .nav-items a.router-link-active {
     color: var(--clr-header-nav-primary-selected);
     background-color: var(--clr-header-nav-selected);
 }
-
-
-
 
 a.nav-item {
 

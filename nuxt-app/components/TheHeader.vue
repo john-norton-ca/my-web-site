@@ -7,7 +7,7 @@
         <NuxtLink to="/main-page" class="logo">
             
         </NuxtLink>
-        <p class="logo-title">My Nuxt 3 Site</p>
+        <p class="logo-title">nomososo</p>
         <div class="header-contact-info">
             <p title="telephone" class="icon phone-number">
                 Call us at 1-800-555-5555
@@ -36,7 +36,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: #f0f0f0;
+    color: white;
+
 }
 
 .logo {
@@ -54,8 +55,9 @@
 }
 
 .logo-title {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
+ 
 }
 
 .header-contact-info {

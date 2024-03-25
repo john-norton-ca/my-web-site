@@ -44,6 +44,10 @@ import TheHeader from '../components/TheHeader.vue';
     margin: var(--desktop-gutter);
 }
 
+.footer {
+    margin: var(--desktop-gutter);
+}
+
 a.nav-item,
 a.nav-item:link,
 a.nav-item:visited {
