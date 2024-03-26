@@ -1,25 +1,24 @@
 <template>
-    <div class="flex-parent-element">
-      <div class="flex-child-element menu">
-        <h1>My Main Page</h1>
-        <p>My main page content</p>
-      </div>
-
-      <div class="flex-child-element context">
-        <h1>My Main Page</h1>
-        <p>My main page content</p>
-      </div>
+  <div class="flex-parent-element">
+    <div class="flex-child-element menu">
+      <h1>My Main Page</h1>
+      <p>My main page content</p>
     </div>
+
+    <div class="flex-child-element context">
+      <h1>My Main Page</h1>
+      <p>My main page content</p>
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
+const p = 0
+console.log('hello')
 definePageMeta({
-  layout: "new-default",
-});
-
-
+  layout: 'new-default',
+})
 </script>
-
 
 <style scoped>
 /* Styles for the h1 elements */
@@ -57,5 +56,4 @@ h1 {
 .flex-child-element:first-child {
   margin-right: 20px; /* Add some margin to the right */
 }
-
 </style>

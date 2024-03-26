@@ -1,9 +1,9 @@
 <template>
   <nav class="nav">
     <ul class="nav-items">
-      <NuxtLink to="main-page" class="nav-item">Home</NuxtLink>
-      <NuxtLink to="my-team" class="nav-item">My Team</NuxtLink>
-      <NuxtLink to="contact-page" class="nav-item">Contact</NuxtLink>
+      <NuxtLink to="main-page" class="nav-item"> Home </NuxtLink>
+      <NuxtLink to="my-team" class="nav-item"> My Team </NuxtLink>
+      <NuxtLink to="contact-page" class="nav-item"> Contact </NuxtLink>
       <div class="linked-in-nav-item">
         <div title="LinkedIn Profile" class="linked-in">
           <div class="img-wrapper">
