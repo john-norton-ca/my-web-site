@@ -1,5 +1,8 @@
 <template>
   <div class="footer">
-    <p>&copy; 2024 NoMoSoSo</p>
+    <p>{{ config.copyrightText }}</p>
   </div>
 </template>
+<script setup lang="ts">
+const { public: config } = useRuntimeConfig()
+</script>

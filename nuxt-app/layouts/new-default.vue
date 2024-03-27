@@ -3,6 +3,7 @@ import TheHeader from '../components/TheHeader.vue';
   <div class="app-frame">
     <div class="mainLayout">
       <TheHeader />
+      CookieConsent: {{ appStore.cookieConsent }}
       <section class="main-container">
         <slot />
       </section>
@@ -10,6 +11,13 @@ import TheHeader from '../components/TheHeader.vue';
     </div>
   </div>
 </template>
+<script setup lang="ts">
+import { useAppStore } from '~/store/app'
+const appStore = useAppStore()
+onMounted(() => {
+  appStore.updateCookieConsent(true)
+})
+</script>
 
 <style>
 .app-frame {

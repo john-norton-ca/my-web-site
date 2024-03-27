@@ -8,5 +8,12 @@ export default defineNuxtConfig({
   },
 
   css: ['@/assets/css/main.css'],
-  modules: ['@nuxt/image'],
+  modules: ['@nuxt/image', '@pinia/nuxt'],
+  runtimeConfig: {
+    public: {
+      sitename: 'jbn.technology',
+      companyName: 'JBN Technology',
+      copyrightText: '© 2024 JBN Technology - all rights reserved',
+    },
+  },
 })

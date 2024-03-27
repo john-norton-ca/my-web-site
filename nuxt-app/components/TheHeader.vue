@@ -1,15 +1,14 @@
 <template>
   <div class="menu-container">
     <NuxtLink to="/main-page" class="logo" />
-    <p class="logo-title">jbn.technology</p>
+    <p class="logo-title">{{ config.sitename }}</p>
     <div class="header-contact-info" />
   </div>
   <MainNavBar />
 </template>
 
 <script setup lang="ts">
-// import { useAppStore } from '~/store/app'
-// const appStore = useAppStore()
+const { public: config } = useRuntimeConfig()
 </script>
 
 <style scoped>
