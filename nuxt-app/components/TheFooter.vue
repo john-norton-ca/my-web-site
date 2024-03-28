@@ -1,5 +1,6 @@
 <template>
   <div class="footer">
+    <span v-if="config.siteEnvironment"> {{ config.siteEnvironment }} - </span>
     <p>{{ config.copyrightText }}</p>
   </div>
 </template>
