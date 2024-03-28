@@ -14,13 +14,13 @@
         </div>
       </div>
       <div class="profile-nav-item">
-        <a class="auth-link" href="/login">
+        <a class="auth-link">
           <img
             class="profile-img icon"
             src="/images/profile-default.svg"
             alt="default profile icon"
           />
-          <span>sign in</span>
+          <span>Sign in</span>
         </a>
       </div>
     </ul>
@@ -51,6 +51,19 @@
 .nav-items a.router-link-active {
   color: var(--clr-header-nav-primary-selected);
   background-color: var(--clr-header-nav-selected);
+}
+.nav-item {
+  background-color: transparent;
+  color: var(--clr-header-nav-text-primary);
+  opacity: 0.8;
+  padding: 0.5rem var(-nav-item-horz-padding);
+  text-align: center;
+}
+
+a.nav-item,
+a.nav-item:link,
+a.nav-item:visited {
+  text-decoration: none;
 }
 
 a.nav-item,
