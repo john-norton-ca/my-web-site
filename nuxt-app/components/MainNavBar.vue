@@ -13,6 +13,16 @@
           </div>
         </div>
       </div>
+      <div class="profile-nav-item">
+        <a class="auth-link" href="/login">
+          <img
+            class="profile-img icon"
+            src="/images/profile-default.svg"
+            alt="default profile icon"
+          />
+          <span>sign in</span>
+        </a>
+      </div>
     </ul>
   </nav>
 </template>
@@ -43,9 +53,12 @@
   background-color: var(--clr-header-nav-selected);
 }
 
-a.nav-item {
-  opacity: 0.8;
-  padding: 0.5rem var(--nav-item-horz-padding);
+a.nav-item,
+a.auth-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.1rem var(--nav-item-horz-padding);
   text-align: center;
 }
 
@@ -58,11 +71,22 @@ a.nav-item {
 .linked-in img {
   display: block; /* To remove the bottom space that inline elements have */
 }
+.profile-nav-item,
 .linked-in-nav-item {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0.5rem var(--nav-item-horz-padding);
   text-align: center;
+}
+.icon {
+  margin-right: 0.5rem;
+}
+
+.profile-img {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  display: block; /* To remove the bottom space that inline elements have */
 }
 </style>

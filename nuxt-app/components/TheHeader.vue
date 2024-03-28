@@ -2,6 +2,7 @@
   <div class="menu-container">
     <NuxtLink to="/main-page" class="logo" />
     <p class="logo-title">{{ config.sitename }}</p>
+
     <div class="header-contact-info" />
   </div>
   <MainNavBar />
@@ -49,9 +50,5 @@ const { public: config } = useRuntimeConfig()
 .header-contact-info {
   display: flex;
   align-items: center;
-}
-
-.icon {
-  margin-right: 0.5rem;
 }
 </style>
