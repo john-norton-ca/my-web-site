@@ -1,68 +1,63 @@
 :root {
+  --clr-header-background-start: #172b20;
+  --clr-header-background-end: #8cb3b8;
+  --clr-header-nav-background-start: #8cb3b8;
+  --clr-header-nav-background-end: #d8e3ee;
+  --clr-header-nav-selected: #4996dd;
+  --clr-header-nav-primary: rgb(0, 0, 0, 0.58);
+  --clr-header-nav-primary-selected: #fff;
 
-    --clr-header-background-start: #172b20;
-    --clr-header-background-end:  #8cb3b8;
-    --clr-header-nav-background-start: #8cb3b8;
-    --clr-header-nav-background-end: #d8e3ee;
-    --clr-header-nav-selected: #4996dd;
-    --clr-header-nav-primary: rgb(0,0,0,0.58);
-    --clr-header-nav-primary-selected: #fff;
+  --clr-footer-background: #5f6a80;
+  --clr-footer-text: #a2a8b5;
 
-    --clr-footer-background: #5f6a80 ;
-    --clr-footer-text: #a2a8b5;
+  --ff-primary: 'Manrope', sans-serif;
+  --ff-font-awesome: 'Font Awesome 5 Free';
+  --ff-font-aswesome-brands: 'Font Awesome 5 Brands';
 
-    --ff-primary: 'Manrope', sans-serif;
-    --ff-font-awesome: 'Font Awesome 5 Free';
-    --ff-font-aswesome-brands: 'Font Awesome 5 Brands';
-
-    --nav-item-horz-padding: 1em;
-    --desktop-gutter: 1em;
+  --nav-item-horz-padding: 1em;
+  --desktop-gutter: 1em;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
 
-img{
-    max-width: 100%;
-    height: auto;
+img {
+  max-width: 100%;
+  height: auto;
 }
 html {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    font-weight: 400;
-    font-size: 1rem;
-    min-height: 100%;
-    display: flex;
-    flex-direction: column; 
-    font-family: var(--ff-primary);
+  font-weight: 400;
+  font-size: 1rem;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--ff-primary);
 }
 
 body,
 h1,
 h2,
 h3,
-p{
-    margin: 0;
+p {
+  margin: 0;
 }
 
 h1 {
-    font-size: 2.0rem;
-    font-weight: 200;
+  font-size: 2rem;
+  font-weight: 200;
 }
 
 h2 {
-    font-size: 1.25rem;
-    font-weight: 200;
-    color: var(--clr-content-text-accent);
-
+  font-size: 1.25rem;
+  font-weight: 200;
+  color: var(--clr-content-text-accent);
 }
-
-
-

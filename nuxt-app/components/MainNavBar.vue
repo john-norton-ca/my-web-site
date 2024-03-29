@@ -14,14 +14,12 @@
         </div>
       </div>
       <div class="profile-nav-item">
-        <a class="auth-link">
-          <img
-            class="profile-img icon"
-            src="/images/profile-default.svg"
-            alt="default profile icon"
-          />
-          <span>Sign in</span>
-        </a>
+        <img
+          class="profile-img icon"
+          src="/images/profile-default.svg"
+          alt="default profile icon"
+        />
+        <AuthN />
       </div>
     </ul>
   </nav>
@@ -55,9 +53,9 @@
 .nav-item {
   background-color: transparent;
   color: var(--clr-header-nav-text-primary);
-  opacity: 0.8;
   padding: 0.5rem var(-nav-item-horz-padding);
   text-align: center;
+  height: 3.5rem;
 }
 
 a.nav-item,
@@ -90,7 +88,6 @@ a.auth-link {
   align-items: center;
   justify-content: center;
   padding: 0.5rem var(--nav-item-horz-padding);
-  text-align: center;
 }
 .icon {
   margin-right: 0.5rem;

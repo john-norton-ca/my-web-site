@@ -13,10 +13,13 @@ export default defineNuxtConfig({
   modules: ['@nuxt/image', '@pinia/nuxt'],
   runtimeConfig: {
     public: {
-      sitename: 'jbn.technology',
+      sitename: 'NoMoSoSo.com',
       companyName: 'JBN Technology',
       copyrightText: '© 2024 JBN Technology - all rights reserved',
       siteEnvironment: GlobalSettings[appEnv].siteEnvironment,
+      MSAL_CLIENT_ID: GlobalSettings[appEnv].MSAL_CLIENT_ID,
+      MSAL_AUTHORITY: GlobalSettings[appEnv].MSAL_AUTHORITY,
+      MSAL_KNOWN_AUTHORITIES: GlobalSettings[appEnv].MSAL_KNOWN_AUTHORITIES,
     },
   },
 })
