@@ -13,9 +13,9 @@ export default defineNuxtConfig({
   modules: ['@nuxt/image', '@pinia/nuxt'],
   runtimeConfig: {
     public: {
-      sitename: 'NoMoSoSo.com',
-      companyName: 'JBN Technology',
-      copyrightText: '© 2024 JBN Technology - all rights reserved',
+      sitename: 'about.jbn.technology',
+      companyName: 'NoMoSoSo',
+      copyrightText: '© 2024 NoMoSoSo - all rights reserved',
       siteEnvironment: GlobalSettings[appEnv].siteEnvironment,
       MSAL_CLIENT_ID: GlobalSettings[appEnv].MSAL_CLIENT_ID,
       MSAL_AUTHORITY: GlobalSettings[appEnv].MSAL_AUTHORITY,
