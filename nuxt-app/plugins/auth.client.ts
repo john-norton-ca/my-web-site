@@ -10,7 +10,7 @@ export default defineNuxtPlugin(async (nuxtApp) => {
     auth: {
       clientId: runtimeConfig.MSAL_CLIENT_ID,
       authority: runtimeConfig.MSAL_AUTHORITY,
-      redirectUri: 'http://localhost:3001/oidc-callback',
+      redirectUri: runtimeConfig.MSAL_REDIRECT_URI,
       knownAuthorities: runtimeConfig.MSAL_KNOWN_AUTHORITIES,
     },
     cache: {

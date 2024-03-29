@@ -20,6 +20,7 @@ export default defineNuxtConfig({
       MSAL_CLIENT_ID: GlobalSettings[appEnv].MSAL_CLIENT_ID,
       MSAL_AUTHORITY: GlobalSettings[appEnv].MSAL_AUTHORITY,
       MSAL_KNOWN_AUTHORITIES: GlobalSettings[appEnv].MSAL_KNOWN_AUTHORITIES,
+      MSAL_REDIRECT_URI: GlobalSettings[appEnv].MSAL_REDIRECT_URI,
     },
   },
 })
