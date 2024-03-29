@@ -25,7 +25,7 @@ const GlobalSettings = {
       'https://nomososo.b2clogin.com/nomososo.onmicrosoft.com/B2C_1_Sign_Up_And_Sign_In',
     MSAL_KNOWN_AUTHORITIES: ['nomososo.b2clogin.com'],
     MSAL_REDIRECT_URI:
-      'https://wonderful-smoke-0d475451e.5.azurestaticapps.net//oidc-callback',
+      'https://wonderful-smoke-0d475451e.5.azurestaticapps.net/oidc-callback',
   },
 }
 
