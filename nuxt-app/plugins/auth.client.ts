@@ -19,7 +19,7 @@ export default defineNuxtPlugin(async (nuxtApp) => {
     },
   }
 
-  console.log('MSAL Config:', msalConfig)
+  // console.log('MSAL Config:', msalConfig)
   const msalInstance = new msal.PublicClientApplication(msalConfig)
   await msalInstance.initialize()
   const account = msalInstance.getActiveAccount()
@@ -32,9 +32,9 @@ export default defineNuxtPlugin(async (nuxtApp) => {
     .then((response) => {
       if (response) {
         const accounts = msalInstance.getAllAccounts()
-        console.log('accounts', accounts)
+        // console.log('accounts', accounts)
         if (accounts.length > 0) {
-          console.log('account', accounts[0])
+          // console.log('account', accounts[0])
           msalInstance.setActiveAccount(accounts[0])
           authStore.updateCurrentUser(accounts[0])
         } else {

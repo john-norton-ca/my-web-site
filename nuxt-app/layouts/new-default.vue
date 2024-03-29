@@ -2,7 +2,7 @@
   <div class="app-frame">
     <div class="mainLayout">
       <TheHeader />
-      CookieConsent: {{ appStore.cookieConsent }}
+      <!-- CookieConsent: {{ appStore.cookieConsent }} -->
       <section class="main-container">
         <slot />
       </section>
@@ -25,14 +25,15 @@ onMounted(() => {
   border-color: var(--clr-header-nav-selected);
   border-width: 2px;
   height: 100vh;
+  width: 100%;
 }
 
 .mainLayout {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  min-width: 500px;
+  width: 1200px;
+  min-width: 800px;
   max-width: 1200px;
   height: 100vh;
   background-color: #f0f0f0;

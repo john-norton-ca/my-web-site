@@ -1,6 +1,11 @@
 <template>
   <div>
-    <a v-if="!authStore.loggedIn" href="" @click.prevent="signInAction">
+    <a
+      v-if="!authStore.loggedIn"
+      href=""
+      class="auth-component"
+      @click.prevent="signInAction"
+    >
       Sign In
     </a>
     <div v-if="authStore.loggedIn" class="auth-component">
@@ -14,7 +19,7 @@
 import { useAuthStore } from '~/store/auth.ts'
 
 const authStore = useAuthStore()
-console.log('current user', authStore.currentUser)
+// console.log('current user', authStore.currentUser)
 
 const { $msal } = useNuxtApp()
 async function signInAction() {
@@ -38,7 +43,9 @@ async function signOutAction() {
   align-items: left;
   color: var(--clr-header-nav-text-primary);
   opacity: 0.8;
+  min-width: 400px;
 }
+
 a,
 a:link,
 a:visited {

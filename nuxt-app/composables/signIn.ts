@@ -1,6 +1,6 @@
 export const signIn = async () => {
   const { $msal } = useNuxtApp()
-  console.log($msal)
+  // console.log($msal)
 
   const loginRequest = {
     scopes: ['openid', 'profile'],

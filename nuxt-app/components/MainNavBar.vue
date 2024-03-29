@@ -1,31 +1,61 @@
 <template>
   <nav class="nav">
-    <ul class="nav-items">
-      <NuxtLink to="main-page" class="nav-item"> Home </NuxtLink>
-      <NuxtLink to="my-team" class="nav-item"> My Team </NuxtLink>
-      <NuxtLink to="contact-page" class="nav-item"> Contact </NuxtLink>
-      <div class="linked-in-nav-item">
-        <div title="LinkedIn Profile" class="linked-in">
-          <div class="img-wrapper">
-            <a href="https://www.linkedin.com/in/johnbnorton/">
-              <img src="/images/In-Blue-21.png" alt="LinkedIn" />
-            </a>
+    <div class="horz-container">
+      <ul class="nav-items">
+        <NuxtLink to="main-page" class="nav-item"> Home </NuxtLink>
+        <NuxtLink to="my-team" class="nav-item"> My Team </NuxtLink>
+        <NuxtLink to="contact-page" class="nav-item"> Contact </NuxtLink>
+      </ul>
+      <ul class="nav-items group-right">
+        <div class="horz-contained group-right">
+          <div class="linked-in-nav-item">
+            <div title="LinkedIn Profile" class="linked-in">
+              <div class="img-wrapper">
+                <a href="https://www.linkedin.com/in/johnbnorton/">
+                  <img src="/images/In-Blue-21.png" alt="LinkedIn" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="profile-nav-item">
+            <img
+              class="profile-img icon"
+              src="/images/profile-default.svg"
+              alt="default profile icon"
+            />
+            <AuthN />
           </div>
         </div>
-      </div>
-      <div class="profile-nav-item">
-        <img
-          class="profile-img icon"
-          src="/images/profile-default.svg"
-          alt="default profile icon"
-        />
-        <AuthN />
-      </div>
-    </ul>
+      </ul>
+    </div>
   </nav>
 </template>
 
 <style scoped>
+.horz-container,
+.nav-items {
+  display: flex;
+  flex-direction: row;
+  /*justify-content: left;*/
+  justify-self: stretch;
+}
+.horz-contained,
+.nav-item,
+.profile-nav-item,
+.linked-in-nav-item {
+  display: flex;
+  justify-content: left;
+  justify-self: stretch;
+}
+
+.group-right {
+  justify-content: right;
+  width: 100%;
+}
+.group-left {
+  justify-content: left;
+}
+
 .nav {
   background-image: linear-gradient(
     to bottom right,
@@ -36,10 +66,6 @@
 }
 
 .nav-items {
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-  justify-self: stretch;
   list-style: none;
   padding: 0;
   margin: var(--desktop-gutter), 0;
@@ -56,17 +82,10 @@
   padding: 0.5rem var(-nav-item-horz-padding);
   text-align: center;
   height: 3.5rem;
+  width: 100px;
 }
 
-a.nav-item,
-a.nav-item:link,
-a.nav-item:visited {
-  text-decoration: none;
-}
-
-a.nav-item,
-a.auth-link {
-  display: flex;
+a.nav-item {
   align-items: center;
   justify-content: center;
   padding: 0.1rem var(--nav-item-horz-padding);
@@ -81,14 +100,15 @@ a.auth-link {
 
 .linked-in img {
   display: block; /* To remove the bottom space that inline elements have */
+  min-width: 24px;
 }
 .profile-nav-item,
 .linked-in-nav-item {
-  display: flex;
   align-items: center;
   justify-content: center;
   padding: 0.5rem var(--nav-item-horz-padding);
 }
+
 .icon {
   margin-right: 0.5rem;
 }

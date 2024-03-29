@@ -13,7 +13,6 @@
 </template>
 
 <script setup lang="ts">
-console.log('hello')
 definePageMeta({
   layout: 'new-default',
 })
