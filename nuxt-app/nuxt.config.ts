@@ -8,6 +8,13 @@ export default defineNuxtConfig({
   typescript: {
     shim: false,
   },
+  head: {
+    meta: [
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      // other meta tags...
+    ],
+    // other head properties...
+  },
 
   css: ['@/assets/css/main.css'],
   modules: ['@nuxt/image', '@pinia/nuxt'],
