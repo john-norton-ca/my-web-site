@@ -1,9 +1,8 @@
 <template>
-  <div class="menu-container">
-    <NuxtLink to="/main-page" class="logo" />
-    <p class="logo-title">{{ config.sitename }}</p>
-
-    <div class="header-contact-info" />
+  <div class="header-container">
+    <div class="logo header-contained" />
+    <p class="logo-title header-contained">{{ config.sitename }}</p>
+    <AuthN class="header-contained" />
   </div>
   <MainNavBar />
 </template>
@@ -13,42 +12,57 @@ const { public: config } = useRuntimeConfig()
 </script>
 
 <style scoped>
-.menu-container {
+.header-container {
   background-image: linear-gradient(
     to bottom right,
     var(--clr-header-background-start),
     var(--clr-header-background-end)
   );
   width: 100%;
-}
-.menu-container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column; /* Stack elements vertically on mobile */
   align-items: center;
   padding: 1rem;
   color: white;
 }
 
-.logo {
+.header-contained {
   display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: #333;
+  justify-content: flex-start; /* Center elements on mobile */
+  width: 100%; /* Take full width on mobile */
+}
 
-  background-image: url('/images/logo-nobg.png');
-  background-size: cover; /* Add this line */
-  background-position: center; /* Add this line */
-  height: 100px;
-  width: 100px; /* Change this line */
+.logo {
+  display: none;
+
+  height: 48px;
+  width: 48px;
 }
 
 .logo-title {
   font-size: 2rem;
   font-weight: bold;
+  text-align: center; /* Center text on mobile */
 }
 
-.header-contact-info {
-  display: flex;
-  align-items: center;
+/* Styles for larger screens */
+@media (min-width: 768px) {
+  .header-container {
+    flex-direction: row; /* Align elements horizontally on larger screens */
+    justify-content: space-between;
+  }
+
+  .header-contained {
+    justify-content: left; /* Align elements to the left on larger screens */
+    width: auto; /* Auto width on larger screens */
+  }
+  .logo {
+    display: block;
+    background-image: url('/images/logo-nobg.png');
+    background-size: cover;
+    background-position: center;
+    height: 90px;
+    width: 90px;
+  }
 }
 </style>

@@ -32,18 +32,33 @@ onMounted(() => {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  width: 1200px;
-  min-width: 800px;
-  max-width: 1200px;
+  width: 100%; /* Full width on mobile */
   height: 100vh;
   background-color: #f0f0f0;
 }
 
 .main-container {
-  margin: var(--desktop-gutter);
+  margin: var(--mobile-gutter); /* Use mobile gutter on mobile */
 }
 
 .footer {
-  margin: var(--desktop-gutter);
+  margin: var(--mobile-gutter); /* Use mobile gutter on mobile */
+}
+
+/* Styles for larger screens */
+@media (min-width: 768px) {
+  .mainLayout {
+    width: 1200px; /* Fixed width on larger screens */
+    min-width: 800px;
+    max-width: 1200px;
+  }
+
+  .main-container {
+    margin: var(--desktop-gutter); /* Use desktop gutter on larger screens */
+  }
+
+  .footer {
+    margin: var(--desktop-gutter); /* Use desktop gutter on larger screens */
+  }
 }
 </style>

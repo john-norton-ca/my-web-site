@@ -1,16 +1,25 @@
 <template>
-  <div>
-    <a
-      v-if="!authStore.loggedIn"
-      href=""
-      class="auth-component"
-      @click.prevent="signInAction"
-    >
-      Sign In
-    </a>
-    <div v-if="authStore.loggedIn" class="auth-component">
-      <div>{{ authStore.currentUser.username }}</div>
-      <div><a href="" @click.prevent="signOutAction">Sign out</a></div>
+  <div class="auth-component horz-container">
+    <img
+      class="horz_container profile-img"
+      src="/images/profile-default.svg"
+      alt="default profile icon"
+    />
+    <div class="horz-contained">
+      <a
+        v-if="!authStore.loggedIn"
+        href=""
+        class="auth-component"
+        @click.prevent="signInAction"
+      >
+        Sign In
+      </a>
+      <div v-if="authStore.loggedIn">
+        <div class="horz-contained">{{ authStore.currentUser.username }}</div>
+        <div class="horz-contained">
+          <a href="" @click.prevent="signOutAction">Sign out</a>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -36,14 +45,23 @@ async function signOutAction() {
 }
 </script>
 <style scoped>
-.auth-component {
+.horz-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  justify-content: right;
+  justify-self: stretch;
+}
+.horz-contained {
+  display: flex;
   justify-content: left;
+  justify-self: stretch;
+}
+.auth-component {
   align-items: left;
   color: var(--clr-header-nav-text-primary);
   opacity: 0.8;
-  min-width: 400px;
+  width: 100%;
 }
 
 a,
@@ -52,5 +70,17 @@ a:visited {
   text-decoration: none;
   color: var(--clr-header-nav-text-primary);
   opacity: 0.8;
+}
+.profile-img {
+  display: none; /* Hide on mobile */
+  height: 48px;
+  width: 48px;
+}
+
+/* Styles for larger screens */
+@media (min-width: 768px) {
+  .profile-img {
+    display: block; /* Show on larger screens */
+  }
 }
 </style>

@@ -21,14 +21,6 @@
               </div>
             </div>
           </div>
-          <div class="profile-nav-item">
-            <img
-              class="profile-img icon"
-              src="/images/profile-default.svg"
-              alt="default profile icon"
-            />
-            <AuthN />
-          </div>
         </div>
       </ul>
     </div>
