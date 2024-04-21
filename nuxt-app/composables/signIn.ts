@@ -3,7 +3,7 @@ export const signIn = async () => {
   // console.log($msal)
 
   const loginRequest = {
-    scopes: ['openid', 'profile'],
+    scopes: ['openid', 'profile', 'email'],
   }
   try {
     await $msal.loginRedirect(loginRequest)
