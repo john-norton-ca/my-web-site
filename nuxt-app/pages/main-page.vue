@@ -117,6 +117,7 @@ h1 {
 .flex-parent-element {
   display: flex; /* Use flex layout */
   max-width: 100%; /* Limit width to 100% */
+  min-width: 100%;
 }
 
 /* Styles for the child flex elements */
@@ -128,9 +129,10 @@ h1 {
 /* Styles for the menu element */
 .menu {
   /* border: 2px solid blueviolet; Add a border */
-  margin-right: 1em; /* Add some margin */
-  min-width: 20%; /* Set a minimum width */
-  max-width: 20%; /* Set a maximum width */
+
+  min-width: 200px; /* Set a minimum width */
+  max-width: 200px; /* Set a maximum width */
+  margin-right: 7.5%; /* Add some margin */
 }
 
 /* Styles for the context element */
@@ -138,6 +140,7 @@ h1 {
   flex: 1; /* Take up remaining space in flex container */
   /* border: 2px solid blueviolet;  Add a border */
   margin-right: 7.5%; /* Add some margin */
+  max-width: 100%;
 }
 
 .context p {
