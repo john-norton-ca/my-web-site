@@ -89,7 +89,7 @@ const authStore = useAuthStore()
   padding: 0.5rem var(-nav-item-horz-padding);
   text-align: center;
   height: 3.5rem;
-  width: 100px;
+  /*width: 3rem;*/
 }
 
 a.nav-item {

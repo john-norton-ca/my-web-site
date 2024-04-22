@@ -42,9 +42,9 @@ html {
 
 body {
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 0.7rem;
   min-height: 100%;
-  min-width: 600px;
+  min-width: 320px;
   display: flex;
   flex-direction: column;
   font-family: var(--ff-primary);
@@ -59,17 +59,23 @@ p {
 }
 
 h1 {
-  font-size: 2rem;
-  font-weight: 200;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
 h2 {
-  font-size: 1.5rem;
-  font-weight: 200;
+  font-size: 1.25rem;
+  font-weight: 500;
   color: var(--clr-content-text-accent);
 }
 
 p {
-  font-size: 1rem;
   line-height: 1.5;
+  font-weight: 100;
+}
+
+@media (min-width: 500px) {
+  body {
+    font-size: 1rem;
+  }
 }

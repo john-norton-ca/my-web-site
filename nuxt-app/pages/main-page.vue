@@ -98,6 +98,11 @@
 <script setup lang="ts">
 definePageMeta({
   layout: 'new-default',
+  title: 'Main Page',
+  meta: [
+    { name: 'viewport', content: 'width=device-width, initial-scale=0.33' },
+    // any other meta tags...
+  ],
 })
 </script>
 
@@ -112,6 +117,10 @@ h2 {
 }
 .page {
   margin-left: 10px;
+}
+
+.page-header {
+  margin-bottom: 0px;
 }
 
 .menu p {
@@ -166,10 +175,20 @@ h2 {
 
 /* Styles for larger screens */
 @media (min-width: 768px) {
-  .menu p {
-    display: block; /* Display the paragraph elements */
+  .page-header {
+    margin-bottom: 20px; /* remove margin */
+  }
+  .menu {
     min-width: 200px; /* Set a minimum width */
     max-width: 200px; /* Set a maximum width */
+  }
+  .menu h1 {
+    margin-top: 0; /* Remove the top margin */
+    margin-bottom: 10px; /* Add some margin to the bottom */
+  }
+  .menu p {
+    display: block; /* Display the paragraph elements */
+
     margin-right: 7.5%; /* Add some margin */
   }
   .flex-parent-element {
