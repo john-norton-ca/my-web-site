@@ -34,15 +34,11 @@ const { public: config } = useRuntimeConfig()
 
 .logo {
   display: none;
-
-  height: 48px;
-  width: 48px;
 }
 
 .logo-title {
   font-size: 1.5rem;
   font-weight: bold;
-  text-align: center; /* Center text on mobile */
 }
 
 /* Styles for larger screens */
@@ -65,7 +61,7 @@ const { public: config } = useRuntimeConfig()
     width: 90px;
   }
   .logo-title {
-    font-size: 2rem;
+    /*font-size: 2rem;*/
   }
 }
 </style>
