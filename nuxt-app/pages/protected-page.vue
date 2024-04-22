@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-if="authStore.loggedIn">
-      <h1>My Team</h1>
+      <h1>Protected Content</h1>
     </div>
     <div v-else>
       <h1>Sign in to view the content of this page</h1>

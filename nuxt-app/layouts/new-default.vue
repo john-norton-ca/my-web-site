@@ -24,7 +24,7 @@ onMounted(() => {
   justify-content: center;
   border-color: var(--clr-header-nav-selected);
   border-width: 2px;
-  height: 100vh;
+  /* height: 100vh; */
   width: 100%;
 }
 
@@ -33,7 +33,7 @@ onMounted(() => {
   display: flex;
   flex-direction: column;
   width: 100%; /* Full width on mobile */
-  height: 100vh;
+  /* height: 100vh; */
   background-color: #f0f0f0;
 }
 

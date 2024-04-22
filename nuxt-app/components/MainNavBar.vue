@@ -3,12 +3,18 @@
     <div class="horz-container">
       <ul class="nav-items">
         <NuxtLink to="main-page" class="nav-item"> Home </NuxtLink>
-        <NuxtLink v-if="authStore.loggedIn" to="my-team" class="nav-item">
-          My Team
+        <NuxtLink
+          v-if="authStore.loggedIn"
+          to="protected-page"
+          class="nav-item"
+        >
+          Protected
         </NuxtLink>
         <NuxtLink v-if="authStore.loggedIn" to="contact-page" class="nav-item">
           Contact
         </NuxtLink>
+        <NuxtLink to="privacy" class="nav-item"> Privacy</NuxtLink>
+        <NuxtLink to="terms" class="nav-item"> Terms</NuxtLink>
       </ul>
       <ul class="nav-items group-right">
         <div class="horz-contained group-right">
