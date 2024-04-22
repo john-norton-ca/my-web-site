@@ -4,13 +4,13 @@
       <h1>Main page</h1>
     </div>
     <div class="flex-parent-element">
-      <div class="flex-child-element menu">
+      <div class="flex-child-element menu content">
         <h1>Authentication</h1>
         <p>Microsoft Azure AD B2C</p>
       </div>
 
-      <div class="flex-child-element context">
-        <h1>Authentication using Microsoft Azure Active Directory B2C</h1>
+      <div class="flex-child-element context content">
+        <h2>Authentication using Microsoft Azure Active Directory B2C</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -55,7 +55,7 @@
       </div>
 
       <div class="flex-child-element context">
-        <h1>Right Right Right Right Right Right Right Right</h1>
+        <h2>Right Right Right Right Right Right Right Right</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -106,11 +106,16 @@ definePageMeta({
 h1 {
   color: var(--clr-primary);
 }
+
+h2 {
+  margin-bottom: 20px;
+}
 .page {
   margin-left: 10px;
 }
-.page-header {
-  margin-bottom: 40px; /* Add some margin to the bottom */
+
+.menu p {
+  display: none; /* Hide the paragraph elements */
 }
 
 /* Styles for the parent flex container */
@@ -118,6 +123,7 @@ h1 {
   display: flex; /* Use flex layout */
   max-width: 100%; /* Limit width to 100% */
   min-width: 100%;
+  flex-direction: column; /* Stack children vertically */
 }
 
 /* Styles for the child flex elements */
@@ -130,9 +136,15 @@ h1 {
 .menu {
   /* border: 2px solid blueviolet; Add a border */
 
-  min-width: 200px; /* Set a minimum width */
-  max-width: 200px; /* Set a maximum width */
   margin-right: 7.5%; /* Add some margin */
+  margin-bottom: 20px;
+}
+
+.menu h1 {
+  margin-top: 30px;
+}
+.content {
+  flex-direction: column; /* Stack children vertically */
 }
 
 /* Styles for the context element */
@@ -150,5 +162,18 @@ h1 {
 /* Styles for the first child flex element */
 .flex-child-element:first-child {
   /* margin-right: 20px; Add some margin to the right */
+}
+
+/* Styles for larger screens */
+@media (min-width: 768px) {
+  .menu p {
+    display: block; /* Display the paragraph elements */
+    min-width: 200px; /* Set a minimum width */
+    max-width: 200px; /* Set a maximum width */
+    margin-right: 7.5%; /* Add some margin */
+  }
+  .flex-parent-element {
+    flex-direction: row; /* Stack children horizontally */
+  }
 }
 </style>
