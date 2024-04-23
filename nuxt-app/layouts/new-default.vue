@@ -48,8 +48,6 @@ onMounted(() => {
 /* Styles for larger screens */
 @media (min-width: 768px) {
   .mainLayout {
-    /* width: 1200px; Fixed width on larger screens */
-    /* min-width: 800px; */
     max-width: 1200px;
   }
 

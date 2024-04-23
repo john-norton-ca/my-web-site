@@ -24,6 +24,7 @@ h1 {
 h2 {
   margin-bottom: 20px;
 }
+
 .page {
   margin-left: 10px;
 }
@@ -31,9 +32,11 @@ h2 {
 .page-header {
   margin-bottom: 0px;
 }
-
+.article {
+  margin-top: 20px;
+}
 .menu p {
-  display: none; /* Hide the paragraph elements */
+  display: block; /* Hide the paragraph elements */
 }
 
 /* Styles for the parent flex container */
@@ -103,5 +106,9 @@ h2 {
   .flex-parent-element {
     flex-direction: row; /* Stack children horizontally */
   }
+}
+
+.hidden {
+  display: none;
 }
 </style>
