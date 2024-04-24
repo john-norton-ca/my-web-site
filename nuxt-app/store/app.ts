@@ -12,6 +12,7 @@ export const useAppStore = defineStore('app-store', {
     return {
       siteProperties: {
         cookieConsent: false,
+        openArticles: [],
       },
     }
   },
@@ -19,8 +20,12 @@ export const useAppStore = defineStore('app-store', {
     updateCookieConsent(this: AppStoreState, value: boolean) {
       this.siteProperties.cookieConsent = value
     },
+    updateOpenArticles(this: AppStoreState, value: string[]) {
+      this.siteProperties.openArticles = value
+    },
   },
   getters: {
     cookieConsent: (state: AppStoreState) => state.siteProperties.cookieConsent,
+    openArticles: (state: AppStoreState) => state.siteProperties.openArticles,
   },
 })

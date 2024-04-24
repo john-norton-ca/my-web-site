@@ -5,7 +5,7 @@
       Join me for a deep dive into how I chose and implemented the technology to
       power this site's authentication.
     </p>
-    <div v-show="isArticleVisible" class="article">
+    <div v-show="isArticleVisible" id="10001" class="article">
       <div class="flex-parent-element">
         <div class="flex-child-element menu content">
           <h2>Selection</h2>
@@ -60,10 +60,21 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import { useAppStore } from '~/store/app'
 
-const isArticleVisible = ref(true)
+const appStore = useAppStore()
+const openArtilces = appStore.openArticles
+const isArticleVisible = ref(openArtilces.includes('10001'))
 
 const toggleArticle = () => {
-  isArticleVisible.value = !isArticleVisible.value
+  if (openArtilces.includes('10001')) {
+    appStore.updateOpenArticles(
+      openArtilces.filter((id: string) => id !== '10001')
+    )
+    isArticleVisible.value = false
+  } else {
+    appStore.updateOpenArticles([...openArtilces, '10001'])
+    isArticleVisible.value = true
+  }
 }
 </script>

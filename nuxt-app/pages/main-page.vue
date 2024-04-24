@@ -8,10 +8,6 @@
 definePageMeta({
   layout: 'new-default',
   title: 'Main Page',
-  meta: [
-    { name: 'viewport', content: 'width=device-width, initial-scale=0.33' },
-    // any other meta tags...
-  ],
 })
 </script>
 
