@@ -63,17 +63,17 @@ import { ref } from 'vue'
 import { useAppStore } from '~/store/app'
 
 const appStore = useAppStore()
-const openArtilces = appStore.openArticles
-const isArticleVisible = ref(openArtilces.includes('10001'))
+const openArticles = computed(() => appStore.openArticles)
+const isArticleVisible = ref(openArticles.value.includes('10001'))
 
 const toggleArticle = () => {
-  if (openArtilces.includes('10001')) {
+  if (openArticles.value.includes('10001')) {
     appStore.updateOpenArticles(
-      openArtilces.filter((id: string) => id !== '10001')
+      openArticles.value.filter((id: string) => id !== '10001')
     )
     isArticleVisible.value = false
   } else {
-    appStore.updateOpenArticles([...openArtilces, '10001'])
+    appStore.updateOpenArticles([...openArticles.value, '10001'])
     isArticleVisible.value = true
   }
 }
