@@ -37,7 +37,7 @@ async function signInAction() {
 async function signOutAction() {
   try {
     await $msal.logoutRedirect({
-      postLogoutRedirectUri: '/main-page',
+      postLogoutRedirectUri: '/tech-page',
     })
   } catch (error) {
     console.error('Sign out error', error)

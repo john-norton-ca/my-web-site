@@ -2,7 +2,7 @@
   <nav class="nav">
     <div class="horz-container">
       <ul class="nav-items">
-        <NuxtLink to="main-page" class="nav-item"> Home </NuxtLink>
+        <NuxtLink to="tech-page" class="nav-item"> Tech </NuxtLink>
         <NuxtLink
           v-if="authStore.loggedIn"
           to="protected-page"

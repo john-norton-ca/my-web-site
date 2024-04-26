@@ -7,7 +7,7 @@
       <h1>Sign in to view the content of this page</h1>
       <p>--OR--</p>
       <h3>
-        <NuxtLink to="main-page" class="nav-item"> Go back home </NuxtLink>
+        <NuxtLink to="tech-page" class="nav-item"> Go to Tech </NuxtLink>
       </h3>
     </div>
   </div>
